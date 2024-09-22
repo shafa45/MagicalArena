@@ -21,4 +21,13 @@ public class ArenaTest {
         player.reduceHealth(40);
         assertEquals(0, player.getHealth());
     }
+
+    @Test
+    public void testDiceRoll() {
+        Dice dice = new Dice();
+        for (int i = 0; i < 100; i++) {
+            int roll = dice.roll();
+            assertTrue(roll >= 1 && roll <= 6);
+        }
+    }
 }
